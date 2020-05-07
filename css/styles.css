@@ -1,0 +1,159 @@
+/* font-family: 'Lora', serif; for Headings 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Jost', sans-serif;
+
+*/
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/**** Typography *****/
+
+h1,
+h2,
+h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+nav {
+    text-align: center;
+}
+
+.nav__list--item {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.nav__list--item:hover,
+.nav__list--item:focus {
+    color: #d80032;
+    text-decoration: underline;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style-type: none;
+    padding: .5em;
+}
+
+
+
+hr {
+    height: .25rem;
+    width: 25%;
+    margin: 0;
+    background: #d80032;
+    border: none;
+    transition: .3s ease-in-out;
+  }
+
+span {
+    color: #d80032;
+}
+
+strong {
+    text-transform: uppercase;
+}
+
+header {
+    color: black;
+}
+
+.header__text {
+    text-align: center;
+    padding: 0;
+    margin-top: 1em;
+}
+
+.header-color {
+    background: linear-gradient(#8d99ae, #edf2f4);
+}
+
+.about-color {
+    background: #edf2f4;
+}
+
+.work-color {
+    background: linear-gradient(#8d99ae, #edf2f4);
+}
+
+.contact-color {
+    background: #edf2f4;
+}
+
+
+/***** Mobile Layout *****/
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 6em 2em;
+    border-radius: 10px;
+}
+
+.full-width {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.third-width {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social__text {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-name-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    order: -1;
+    border-radius: 50%;
+    margin: 1em 0;
+    width: 25%;
+    height: auto;
+}
+
+
+
+
+
+
+
