@@ -9,6 +9,10 @@ font-family: 'Jost', sans-serif;
     box-sizing: border-box;
 }
 
+/* html {
+    background: linear-gradient(#8d99ae, #edf2f4);
+} */
+
 body {
     margin: 0;
     padding: 0;
@@ -16,6 +20,7 @@ body {
     line-height: 1.6;
     color: #2b2d42;
     text-align: center;
+    
 }
 
 img {
@@ -43,8 +48,8 @@ h1 {
     font-size: 2rem;
 }
 
-h2 {
-    padding-bottom: 1em;
+.work__heading {
+    margin-bottom: -1em;
 }
 
 h3 {
@@ -139,7 +144,7 @@ li {
     transform: scale(1.1);
 }
 
-/* 
+/* Original setup of social icons spinning on hover
 .i-spin:hover,  
 .i-spin:focus {
     animation: spin-animation .6s;
@@ -166,6 +171,7 @@ strong {
 header {
     color: black;
     background: linear-gradient(#8d99ae, #edf2f4);
+    
 }
 
 .header__text {
@@ -174,16 +180,16 @@ header {
     margin-top: 1em;
 }
 
-/* .header-color {
+.header-color {
     background: linear-gradient(#8d99ae, #edf2f4);
-} */
+}
 
 #about {
     background: #edf2f4;
 }
 
 #work {
-    background: linear-gradient(#8d99ae, #edf2f4);
+    background: linear-gradient(#edf2f4, #8d99ae);
 }
 
 #contact{
@@ -197,20 +203,24 @@ header {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 4em 2em;
+    padding: 4em 0em;
     border-radius: 10px;
 }
 
 .full-width,
-.third-width,
 .header__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.third-width {
+    margin-top: 2.5em;
+}
+
 .work__img {
     width: 80%;
+    margin: 0 auto;
 }
 
 .social__icons {
@@ -218,14 +228,12 @@ header {
     justify-content: center;
 }
 
-
-
 .work__text--title {
     padding-top: 1em;
 }
 
 .work__text--body {
-    padding-bottom: 1.5em;
+    margin-bottom: 0;
 }
 
 .work__text a {
@@ -247,6 +255,26 @@ header {
     padding-bottom: 1em;
 }
 
+/******* Tablet layout *****/
+
+@media (min-width: 600px) {
+    .about__col {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .about__body {
+        width: 48%;
+        text-align: left;
+    }
+
+    .work__text--wrapper {
+        width: 75%;
+        margin:0 auto;
+    }
+}
 
 
 /******* Desktop layout *******/
@@ -266,11 +294,11 @@ header {
     }
 
     p {
-       font-size: 1.25rem;
+       font-size: 1.3rem;
     }
 
     .fab {
-        font-size: 4em;;
+        font-size: 4em;
     }
 
     .full-width {
@@ -289,39 +317,86 @@ header {
     }
 
     .nav__list--item {
-        font-size: 1.5em;
+        font-size: 2em;
         text-align: left;
     }
-
-    .about__col {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    .about__body {
-        width: 48%;
-    }
-
+    
     .work__col {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .third-width {
+        padding: 3rem 0;
         justify-content: space-between;
         align-items: flex-start;
-        width: 90%;
-        margin: 0 auto;
     }
 
-    .third-width + .third-width {
-        padding-left: 2em;
+    .work__img {
+        margin: 0;
+        width: 48%;
+    }
+        
+    .work__text {
+        width: 48%;
+        text-align: left;
+        margin: 0;
     }
 
-    .footer__col {
-        width: 50%;
+    .work__text--title {
+        padding-top: 0;
+    }
+
+    .work__text--body {
+        font-size: ;
+    }
+
+    .third-width {
+        display: flex;
+    }
+
+    /* Footer */
+
+    footer .full-width {
+        justify-content: space-between;
         align-items: center;
     }
 
+    .footer__col {
+        width: 48%;
+    }
+
+    .contact-info {
+        width: 48%;
+    }
+
+    .email__title {
+        font-size: 2.25rem;
+        padding: 0;
+    }
+
+    .email__sub-title {
+        font-size: 1.125rem;
+    }
     
 }
 
+/**** Footer text and button need to be bigger at this screen size ****/
 
+@media (min-width: 1045px) {
+    .email__title {
+        font-size: 2.5rem;
+    }
+
+    .email__sub-title {
+        font-size: 1.5rem;
+    }
+
+    .email-btn {
+        padding: .7em 2.25em;
+        font-size: 1.5rem;
+    }
+}
 
