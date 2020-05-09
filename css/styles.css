@@ -10,7 +10,7 @@ font-family: 'Jost', sans-serif;
 }
 
 body {
-    margin: 4em 0;
+    margin: 0;
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.6;
@@ -93,28 +93,65 @@ li {
 
 .fab {
     font-size: 2em;
-}
-
-i {
     color: #d80032;
     filter:drop-shadow(1px 1px 1px #2b2d42);
-    
+    transition: all .2s ease-in-out;
 }
 
-.i-spin:hover,  /* This spins the social icons on hover/focus */
+.fab:hover,
+.fab:focus {
+    transform: scale(1.1);
+}
+
+.email-btn {
+    display: inline-block;
+    font-family: 'Permanent Marker', cursive;
+    padding: .5em 2em;
+    background: linear-gradient(to right, #d80032, #2b2d42);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 100px;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 5px black;
+    transition: all .2s ease-in-out;
+}
+
+.email-btn:hover,
+.email-btn:focus {
+    transform: scale(1.1);
+}
+
+.profile-pic {
+    order: -1;
+    border-radius: 50%;
+    margin: 1em 0;
+    width: 25%;
+    height: auto;
+    filter:drop-shadow(5px 5px 5px #2b2d42);
+    transition: all .2s ease-in-out;
+}
+
+
+.profile-pic:hover,
+.profile-pic:focus {
+    transform: scale(1.1);
+}
+
+/* 
+.i-spin:hover,  
 .i-spin:focus {
     animation: spin-animation .6s;
     display: inline-block;
 }
 
-@keyframes spin-animation { /* Social icon spin */
+@keyframes spin-animation { 
     0% {
       transform: rotate(0deg);
     }
     100% {
       transform: rotate(359deg);
     }
-  }
+  } */
 
 span {
     color: #d80032;
@@ -126,6 +163,7 @@ strong {
 
 header {
     color: black;
+    background: linear-gradient(#8d99ae, #edf2f4);
 }
 
 .header__text {
@@ -134,19 +172,19 @@ header {
     margin-top: 1em;
 }
 
-.header-color {
+/* .header-color {
     background: linear-gradient(#8d99ae, #edf2f4);
-}
+} */
 
-.about-color {
+#about {
     background: #edf2f4;
 }
 
-.work-color {
+#work {
     background: linear-gradient(#8d99ae, #edf2f4);
 }
 
-.contact-color {
+#contact{
     background: #edf2f4;
 }
 
@@ -156,7 +194,7 @@ header {
 .container {
     width: 80%;
     max-width: 1200px;
-    margin: 1em auto;
+    margin: 0 auto;
     padding: 4em 2em;
     border-radius: 10px;
 }
@@ -178,14 +216,7 @@ header {
     justify-content: center;
 }
 
-.profile-pic {
-    order: -1;
-    border-radius: 50%;
-    margin: 1em 0;
-    width: 25%;
-    height: auto;
-    filter:drop-shadow(5px 5px 5px #2b2d42)
-}
+
 
 .work__text--title {
     padding-top: 1em;
@@ -214,22 +245,7 @@ header {
     padding-bottom: 1em;
 }
 
-.email-btn {
-    display: inline-block;
-    padding: .5em 2em;
-    background: linear-gradient(to right, #d80032, #2b2d42);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 100px;
-    text-transform: uppercase;
-    box-shadow: 3px 3px 5px black;
-    transition: all .2s ease-in-out;
-}
 
-.email-btn:hover,
-.email-btn:focus {
-    transform: scale(1.1);
-}
 
 /******* Desktop layout *******/
 
@@ -249,6 +265,10 @@ header {
 
     p {
        font-size: 1.25rem;
+    }
+
+    .fab {
+        font-size: 4em;;
     }
 
     .full-width {
