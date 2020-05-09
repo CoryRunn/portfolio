@@ -94,7 +94,7 @@ li {
 .fab {
     font-size: 2em;
     color: #d80032;
-    filter:drop-shadow(1px 1px 1px #2b2d42);
+    filter: drop-shadow(.5rem .5rem .75rem #8d99ae);
     transition: all .2s ease-in-out;
 }
 
@@ -112,7 +112,9 @@ li {
     text-decoration: none;
     border-radius: 100px;
     text-transform: uppercase;
-    box-shadow: 3px 3px 5px black;
+    -moz-box-shadow: 1px 1px 10px black;
+    -webkit-box-shadow: 1px 1px 10px black;
+    box-shadow: 1px 1px 10px black;
     transition: all .2s ease-in-out;
 }
 
@@ -127,7 +129,7 @@ li {
     margin: 1em 0;
     width: 25%;
     height: auto;
-    filter:drop-shadow(5px 5px 5px #2b2d42);
+    filter: drop-shadow(5px 5px 5px #2b2d42);
     transition: all .2s ease-in-out;
 }
 
