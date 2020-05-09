@@ -3,14 +3,15 @@
     <head>
         <meta charset="utf-8">
         <title>Cory Runnells | Portfolio</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
         <link rel="stylesheet" href="css/normalize.css">
-        <!-- <link rel="stylesheet" href="css/main.css"> Alternate CSS for backup (to be removed eventually)-->
         <link rel="stylesheet" href="css/styles.css">
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;400;500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/fb44934dbd.js" crossorigin="anonymous"></script>
+
 
 
 
@@ -19,75 +20,98 @@
     
     <body>
         <header>
-            <div class="full-width container header-color">
-                <div class="half-width">
-                    <div class="profile-name-img">
-                        <h1>Cory Runnells</h1>
-                        <div class="social">
-                            <ul class="social__text">
-                                <li><a href="https://www.linkedin.com/in/coryrunnells" target="blank"><img src="img/linkedin.png" alt="Linkedin icon" /></a></li>
-                                <li><a href="https://www.twitter.com/CoryRunn" target="blank"><img src="img/twitter.png" alt="Twitter icon" /></a></li>
-                                <li><a href="https://www.github.com/CoryRunn" target="blank"><img src="img/github.png" alt="Github icon" /></a></li>
-                            </ul>
+            <div class="container header-color">
+                <div class="full-width">
+                    <div class="header">
+                        <div class="header__wrapper">
+                            <h1>Cory Runnells</h1>
+                            <div class="social">
+                                <ul class="social__icons">
+                                    <li><a href="https://www.linkedin.com/in/coryrunnells" target="blank"><i class="fab fa-linkedin i-spin"></i></a></li>
+                                    <li><a href="https://www.twitter.com/CoryRunn" target="blank"><i class="fab fa-twitter-square i-spin"></i></a></li>
+                                    <li><a href="https://www.github.com/CoryRunn" target="blank"><i class="fab fa-github-square i-spin"></i></a></li>
+                                </ul>
+                            </div>
+                            <img src="img/profile-pic.png" alt="Picture of Me" class="profile-pic">
                         </div>
-                        <img src="img/profile-square.png" alt="Picture of Me" class="profile-pic">
+                    </div>
+                    <div class="header__nav">
+                        <nav>
+                            <ul>
+                                <li><a href="#about" class="nav__list--item">About</a></li>
+                                <li><a href="#work" class="nav__list--item">Work</a></li>
+                                <li><a href="#contact" class="nav__list--item">Contact</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
-                <div class="half-width">
-                    <nav>
-                        <ul>
-                            <li><a href="#about" class="nav__list--item">About</a></li>
-                            <li><a href="#work" class="nav__list--item">Work</a></li>
-                            <li><a href="#contact" class="nav__list--item">Contact</a></li>
-                        </ul>
-                    </nav>
+                <div class="header__sub-title">
+                    <h2 class="header__text"><span>Hi,</span> I'm a frontend developer that loves to learn &amp; build with clean code.</h2>
                 </div>
-                <h2 class="header__text"><span>Hi,</span> I'm a frontend developer that loves learning &amp; building with clean code.</h2>
             </div>
         </header>
 
         <main>
             <section id="about">
-                <div class="full-width container about-color">
-                    <h2>A little bit about me</h2>
-                    <div class="half-width">
-                        <p>I live and work in Milwaukee, WI, with my wife and two young children. My career so far has been spent in the Healthcare field as a Radiologic Technologist. Over the last 13 years I have gained some great skills and experience, but now, I want to bring my skills with me to the world of <strong>frontend development</strong>.</p>
-                    </div>
-                    <div class="half-width">
-                        <p>I've always had an affinity for technology. The thought of getting to write code everyday for a living is my dream. To be able to create and develop real world products, that can positively affect lives, is incredibly motivating! I am <strong>beyond excited</strong> to commit to a lifetime of learing!</p>
+                <div class="container about-color">
+                    <h2 class="about__heading">A little bit about me</h2>
+                    <div class="full-width">
+                        <div class="about__col">
+                            <div class="about__body">
+                                <p>I live and work in Milwaukee, WI, with my wife and two young children. My career so far has been spent in the Healthcare field as a Radiologic Technologist. Over the last 13 years I have gained some great skills and experience, but now, I want to bring my skills with me to the world of <strong>frontend development</strong>.</p>
+                            </div>
+                            <div class="about__body">
+                                <p>I've always had an affinity for technology. The thought of getting to write code everyday for a living is my dream. To be able to create and develop real world products, that can positively affect lives, is incredibly motivating! I am <strong>beyond excited to commit to a lifetime of learing</strong>!</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section id="work">
-                <div class="full-width container work-color">
-                    <div class="third-width">
-                        <img src="img/html-icon.png" alt="HTML icon"/>
-                        <h3>Hand-Coded HTML</h3>
-                        <p>My focus is writing clean, well-formatted, semantic HTML5 by hand to make sure that the content is easy to read, easy to collaborate, trouble-shoot and accessible.</p>
-                    </div>
-                    <div class="third-width">
-                        <img src="img/css-icon.png" alt="CSS icon"/>
-                        <h3>Well-Organized CSS</h3>
-                        <p>I pride myself on writing CSS that is easy to read and build on. I focus on keeping my CSS lean and fast to load, and I make it a habit to stay up to date on current best practices.</p>
-                    </div>
-                    <div class="third-width">
-                        <img src="img/pencil-icon.png" alt="Pencil icon"/>
-                        <h3>Ease Converting Designs into Code</h3>
-                        <p>You can trust me to take a designer's PSD and quickly & accurately convert it into a webpage that is pixel-perfect match.</p>
+                <div class="container work-color">
+                    <h2 class="work__heading">Take a look at some of my work</h2>
+                    <div class="full-width work__col">
+                        <div class="third-width">
+                            <div class="work__img">
+                                <a href="https://coryrunn.github.io/unplugged-retreat/" target="_blank"><img src="img/unplugged.png" alt="picture of a webiste I hand-coded"></a>
+                            </div>
+                            <div class="work__text">
+                                <h3 class="work__text--title">Unplugged Retreat</h3>
+                                <p class="work__text--body">This is the very first project I completed after learning about Responsive Web Design. I was given a Photoshop design comp from <a href="https://www.skillcrush.com" target="_blank">Skillcrush.com</a> and used HTML and CSS to build a "mobile first" website. It was also my first foray into Flexbox 💪🏼</p>
+                            </div>
+                        </div>
+                        <div class="third-width">
+                            <div class="work__img">
+                                <a href="https://coryrunn.github.io/final-challenge/" target="_blank"><img src="img/crl.png" alt="picture of a webiste I hand-coded"></a>
+                            </div>
+                            <div class="work__text">
+                                <h3 class="work__text--title">"CRL"</h3>
+                                <p class="work__text--body">In this final challenge, from <a href="https://www.twitter.com/KevinJPowell" target="_blank">Kevin Powell's</a> "Coding Responsive Layouts (CRL) 21 Day Challenge", we were provided with a desktop design file. The challenge was to use a mobile-first philosophy, flexbox, and media queries to get from small to larger screen sizes.</p>
+                            </div>
+                        </div>
+                        <div class="third-width">
+                            <div class="work__img">
+                                <a href="https://coryrunn.github.io/living-the-simple-life/" target="_blank"><img src="img/blog.png" alt="picture of a webiste I hand-coded"></a>
+                            </div>
+                            <div class="work__text">
+                                <h3 class="work__text--title">Three page blog</h3>
+                                <p class="work__text--body">Here is a project taken from <a href="https://www.twitter.com/KevinJPowell" target="_blank">Kevin Powell's</a> course through <a href="https://scrimba.com/course/gresponsive/enrolled" target="_blank">Srimba.com</a> called " The Responsive Web Design Bootcamp". Again, here I was tasked with building a mobile-first design based off an Adobe XD mock-up. This site includes muliple pages and utilizes Flexbox.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
             
             <footer id="contact">
                 <div class="full-width container contact-color">
-                    <div class="half-width">
-                        <img src="img/contact-image.png" alt="Contact icon" id="contact-img" />
+                    <div class="footer__col">
+                        <img src="img/contact.jpg" alt="Contact icon" class="contact-img"/>
                     </div>
-                    <div class="half-width" id="contact-info">
-                        <h2>Like what you see?</h2>
-                        <h3 id="email-header">Let's meet for a cup of coffee</h3>
-                        <a href="mailto:cory.runnells@gmail.com"><img src="img/envelope.png" alt="Envelope icon" id="envelope" />cory.runnells@gmail.com</a>
+                    <div class="footer__col contact-info">
+                        <h2 class="email__title">Like what you see?</h2>
+                        <h3 class="email__sub-title">Shoot me an email. I'd be happy to hear from you!</h3>
+                        <a href="mailto:cory.runnells@gmail.com" class="email-btn">email me</a>
                     </div>
                 </div>
             </footer>
