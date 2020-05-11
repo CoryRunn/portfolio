@@ -1,17 +1,6 @@
-/* font-family: 'Lora', serif; for Headings 
-font-family: 'Montserrat', sans-serif;
-font-family: 'Jost', sans-serif;
-
-*/
-
-
 *, *::before, *::after {
     box-sizing: border-box;
 }
-
-/* html {
-    background: linear-gradient(#8d99ae, #edf2f4);
-} */
 
 body {
     margin: 0;
@@ -20,7 +9,6 @@ body {
     line-height: 1.6;
     color: #2b2d42;
     text-align: center;
-    
 }
 
 img {
@@ -231,10 +219,6 @@ header {
     justify-content: center;
 }
 
-/* .work__text--title {
-    padding-top: 1em;
-} */
-
 .work__text--body {
     margin-bottom: 0;
 }
@@ -383,7 +367,6 @@ header {
     .email__sub-title {
         font-size: 1.125rem;
     }
-    
 }
 
 /**** Footer text and button need to be bigger at this screen size ****/
