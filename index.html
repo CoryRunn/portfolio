@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Cory Runnells | Frontend Developer</title>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <meta name="Description" content="Cory Runnells is a Frontend Developer who is dedicated to a lifetime of learning"
+        <meta name="Description" content="Cory Runnells is a Frontend Developer who is dedicated to a lifetime of learning">
 
         <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
@@ -16,18 +16,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;400;500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/fb44934dbd.js" crossorigin="anonymous"></script>
-
-
-
-
-
-        <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
     </head>
     
     <body>
         <header>
-            <div class="container header-color">
-                <div class="full-width">
+            <div class="container">
+                <div class="flex">
                     <div class="header">
                         <div class="header__wrapper">
                             <h1>Cory Runnells</h1>
@@ -38,35 +32,35 @@
                                     <li><a href="https://www.github.com/CoryRunn" aria-label="GitHub.com link for Cory Runnells" target="_blank" rel="noopener"><i class="fab fa-github-square i-spin"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="img/profile-pic.jpg" alt="Picture of Me" class="profile-pic">
+                            <img src="img/profile-pic.jpg" alt="Picture of Me" class="profile__pic">
                         </div>
                     </div>
                     <div class="header__nav">
                         <nav>
                             <ul>
-                                <li><a href="#about" class="nav__list--item">About</a></li>
-                                <li><a href="#work" class="nav__list--item">Work</a></li>
-                                <li><a href="#contact" class="nav__list--item">Contact</a></li>
+                                <li><a href="#about" class="header__nav--item">About</a></li>
+                                <li><a href="#work" class="header__nav--item">Work</a></li>
+                                <li><a href="#contact" class="header__nav--item">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
-                <div class="header__sub-title">
-                    <h2 class="header__text"><span>Hi,</span> I'm a frontend developer that loves to learn &amp; build with clean code.</h2>
+                <div>
+                    <h2 class="header__sub-title"><span>Hi,</span> I'm a frontend developer that loves to learn &amp; build with clean code.</h2>
                 </div>
             </div>    
         </header>
 
         <main>
-            <section id="about" >
-                <div class="container about-color">
+            <section id="about">
+                <div class="container">
                     <h2 class="about__heading">A little bit about me</h2>
-                    <div class="full-width">
+                    <div class="flex">
                         <div class="about__col">
-                            <div class="about__body">
+                            <div class="about__col--body">
                                 <p>I live and work in Milwaukee, WI, with my wife and two young children. My career so far has been spent in the Healthcare field as a Radiologic Technologist. Over the last 13 years I have gained some great skills and experience, but now, I want to bring my skills with me to the world of <strong>frontend development</strong>.</p>
                             </div>
-                            <div class="about__body">
+                            <div class="about__col--body">
                                 <p>I've always had an affinity for technology. The thought of getting to write code everyday for a living is my dream. To be able to create and develop real world products, that can positively affect lives, is incredibly motivating! I am <strong>beyond excited to commit to a lifetime of learning</strong>!</p>
                             </div>
                         </div>
@@ -75,10 +69,10 @@
             </section>
         
             <section id="work">
-                <div class="container work-color">
+                <div class="container">
                     <h2 class="work__heading">Take a look at some of my work</h2>
-                    <div class="full-width work__col">
-                        <div class="third-width">
+                    <div class="flex work__col">
+                        <div class="work__col--thirds">
                             <div class="work__img">
                                 <a href="https://coryrunn.github.io/unplugged-retreat/" target="_blank" rel="noopener"><img class="work__img--photo" src="img/unplugged.png" alt="picture of a webiste by Cory Runnells"></a>
                             </div>
@@ -87,7 +81,7 @@
                                 <p class="work__text--body">This is the very first project I completed after learning about Responsive Web Design. I was given a Photoshop design comp from <a href="https://www.skillcrush.com" target="_blank" rel="noopener">Skillcrush.com</a> and used HTML and CSS to build a "mobile first" website. It was also my first experience in using Flexbox. 💪🏼</p>
                             </div>
                         </div>
-                        <div class="third-width">
+                        <div class="work__col--thirds">
                             <div class="work__img">
                                 <a href="https://coryrunn.github.io/final-challenge/" target="_blank" rel="noopener"><img class="work__img--photo" src="img/crl.png" alt="picture of a webiste by Cory Runnells"></a>
                             </div>
@@ -96,7 +90,7 @@
                                 <p class="work__text--body">In this final challenge, from <a href="https://www.twitter.com/KevinJPowell" target="_blank" rel="noopener">Kevin Powell's</a> "Coding Responsive Layouts 21 Day Challenge", we were provided with a desktop design file. The challenge was to use a mobile first philosophy, flexbox, and media queries to get from small to larger screen sizes.</p>
                             </div>
                         </div>
-                        <div class="third-width">
+                        <div class="work__col--thirds">
                             <div class="work__img">
                                 <a href="https://coryrunn.github.io/living-the-simple-life/" target="_blank" rel="noopener"><img class="work__img--photo" src="img/blog.png" alt="picture of a webiste by Cory Runnells"></a>
                             </div>
@@ -112,14 +106,14 @@
         
 
         <footer id="contact">
-            <div class="full-width container contact-color">
+            <div class="flex container">
                 <div class="footer__col">
-                    <img src="img/contact.png" alt="Contact icon" class="contact-img"/>
+                    <img src="img/contact.png" alt="Contact icon" class="contact__img"/>
                 </div>
-                <div class="contact-info">
+                <div class="contact__info">
                     <h2 class="email__title">Like what you see?</h2>
                     <h3 class="email__sub-title">Shoot me an email. I'd be happy to hear from you!</h3>
-                    <a href="mailto:cory.runnells@gmail.com" class="email-btn">email me</a>
+                    <a href="mailto:cory.runnells@gmail.com" class="email__btn">email me</a>
                 </div>
             </div>
         </footer>

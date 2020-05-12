@@ -44,41 +44,8 @@ p {
     letter-spacing: .05em;
 }
 
-.fab {
-    font-size: 4rem;
-    color: #d80032;
-    filter: drop-shadow(.5rem .5rem .75rem #8d99ae);
-    transition: all .2s ease-in-out;
-}
-
-.fab:hover,
-.fab:focus {
-    transform: scale(1.1);
-}
-
 nav {
     text-align: center;
-}
-
-.nav__list--item {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: black;
-    font-size: 1.5rem;
-    font-style: italic;
-}
-
-.nav__list--item:after {
-    content: ""; /* This is necessary for the pseudo element to work. */ 
-    display: block; /* This will put the pseudo element on its own line. */
-    width: 0%; /* Change this to whatever width you want to have before hover. */
-    border-bottom: 5px solid #d80032; /* This creates the border. */
-    transition: .5s; /* This establishes the amount of time in seconds the animation should take from start*/
-}
-
-.nav__list--item:hover:after,
-.nav__list--item:focus:after {
-    width: 100%; /* This will be the new width of your border when on hover */
 }
 
 ul {
@@ -90,7 +57,55 @@ li {
     padding: .5em;
 }
 
-.email-btn {
+/* Navigation Stylings */
+.header__nav--item {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #2b2d42;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+span {
+    color: #d80032;
+}
+
+strong {
+    text-transform: uppercase;
+}
+
+/******* Hover effects, Box-shadows, 
+Animated underline *******/
+
+/* Social Icons stylings */
+.fab {
+    font-size: 4rem;
+    color: #d80032;
+    filter: drop-shadow(.5rem .5rem .75rem #8d99ae); /* Icons need drop shadow vs box-shadow */
+    transition: all .2s ease-in-out;
+}
+
+.fab:hover,
+.fab:focus {
+    transform: scale(1.1);
+}
+
+/* Animated underline */
+.header__nav--item:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    width: 0%; /* Change this to whatever width you want to have before hover. */
+    border-bottom: 5px solid #d80032; /* This creates the border. */
+    transition: .5s; /* This establishes the amount of time in seconds the animation should take from start*/
+}
+
+.header__nav--item:hover:after,
+.header__nav--item:focus:after {
+    width: 100%; /* This will be the new width of your border when on hover */
+}
+
+/* Email Button Stylings */
+.email__btn {
     display: inline-block;
     font-family: 'Permanent Marker', cursive;
     padding: .5em 2em;
@@ -105,15 +120,16 @@ li {
     transition: all .2s ease-in-out;
 }
 
-.email-btn:hover,
-.email-btn:focus {
+.email__btn:hover,
+.email__btn:focus {
     transform: scale(1.1);
     -moz-box-shadow: 3px 3px 10px black;
     -webkit-box-shadow: 3px 3px 10px black;
     box-shadow: 3px 3px 10px black;
 }
 
-.profile-pic {
+/* Profile Picture Stylings */
+.profile__pic {
     order: -1;
     border-radius: 50%;
     margin: 1em 0;
@@ -125,34 +141,38 @@ li {
     transition: all .2s ease-in-out;
 }
 
-.profile-pic:hover,
-.profile-pic:focus {
+.profile__pic:hover,
+.profile__pic:focus {
     transform: scale(1.1);
     -moz-box-shadow: 3px 3px 10px #2b2d42;
     -webkit-box-shadow: 3px 3px 10px #2b2d42;
     box-shadow: 3px 3px 10px #2b2d42;
 }
 
-span {
-    color: #d80032;
+/* Work section images (and footer image) stylings */
+.work__img--photo,
+.contact__img /* footer image */ {
+    border-radius: 5px;
 }
 
-strong {
-    text-transform: uppercase;
+.work__img--photo {
+    -moz-box-shadow: 5px 5px 10px #2b2d42;
+    -webkit-box-shadow: 5px 5px 10px #2b2d42;
+    box-shadow: 5px 5px 10px #2b2d42;
+    transition: all .2s ease-in-out;
 }
 
+.work__img--photo:hover,
+.work__img--photo:focus {
+    transform: scale(1.02);
+    -moz-box-shadow: 8px 8px 10px #2b2d42;
+    -webkit-box-shadow: 8px 8px 10px #2b2d42;
+    box-shadow: 8px 8px 10px #2b2d42;
+}
+
+/* Background Colors */
 header {
     color: black;
-    background: linear-gradient(#8d99ae, #edf2f4);
-}
-
-.header__text {
-    text-align: center;
-    padding: 0;
-    margin-top: 1em;
-}
-
-.header-color {
     background: linear-gradient(#8d99ae, #edf2f4);
 }
 
@@ -172,7 +192,7 @@ header {
 }
 
 
-/***** Mobile Layout *****/
+/******** Mobile Layout ******/
 
 .container {
     width: 80%;
@@ -182,36 +202,22 @@ header {
     border-radius: 10px;
 }
 
-.full-width,
+.flex,
 .header__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.header__sub-title {
+    text-align: center;
+    padding: 0;
+    margin-top: 1em;
+}
+
 .work__img {
     width: 100%;
     margin: 2em auto 0;
-}
-
-.work__img--photo,
-.contact-img {
-    border-radius: 5px;
-}
-
-.work__img--photo {
-    -moz-box-shadow: 5px 5px 10px #2b2d42;
-    -webkit-box-shadow: 5px 5px 10px #2b2d42;
-    box-shadow: 5px 5px 10px #2b2d42;
-    transition: all .2s ease-in-out;
-}
-
-.work__img--photo:hover,
-.work__img--photo:focus {
-    transform: scale(1.02);
-    -moz-box-shadow: 8px 8px 10px #2b2d42;
-    -webkit-box-shadow: 8px 8px 10px #2b2d42;
-    box-shadow: 8px 8px 10px #2b2d42;
 }
 
 .social__icons {
@@ -245,6 +251,11 @@ header {
 /******* Tablet layout *****/
 
 @media (min-width: 600px) {
+
+    p {
+        font-size: 1.2rem;
+    }
+
     .about__col {
         display: flex;
         justify-content: space-between;
@@ -252,7 +263,7 @@ header {
         padding: 0;
     }
 
-    .about__body {
+    .about__col--body {
         width: 48%;
         text-align: left;
     }
@@ -265,8 +276,9 @@ header {
 
 
 /******* Desktop layout *******/
-
 @media (min-width: 900px) {
+
+    /* General typography */
 
     h1 {
         font-size: 4rem;
@@ -281,14 +293,18 @@ header {
     }
 
     p {
-       font-size: 1.3rem;
+       font-size: 1.2rem;
     }
 
     .fab {
         font-size: 4em;
     }
 
-    .full-width {
+    /***** Layout *****/
+
+    /* Header */
+
+    .flex {
         flex-direction: row;
         align-items: center;
         margin: 0 auto;
@@ -303,10 +319,12 @@ header {
         padding-left: 4em;
     }
 
-    .nav__list--item {
+    .header__nav--item {
         font-size: 2em;
         text-align: left;
     }
+
+    /* Work section */
     
     .work__col {
         display: flex;
@@ -315,8 +333,9 @@ header {
         margin: 0 auto;
     }
 
-    .third-width {
+    .work__col--thirds {
         padding: 3rem 0;
+        display: flex;
         justify-content: space-between;
         align-items: flex-start;
     }
@@ -336,17 +355,9 @@ header {
         padding-top: 0;
     }
 
-    .work__text--body {
-        font-size: ;
-    }
-
-    .third-width {
-        display: flex;
-    }
-
     /* Footer */
 
-    footer .full-width {
+    footer .flex {
         justify-content: space-between;
         align-items: center;
     }
@@ -355,7 +366,7 @@ header {
         width: 48%;
     }
 
-    .contact-info {
+    .contact__info {
         width: 48%;
     }
 
@@ -370,8 +381,12 @@ header {
 }
 
 /**** Footer text and button need to be bigger at this screen size ****/
-
 @media (min-width: 1045px) {
+
+    p {
+        font-size: 1.3rem;
+     }
+
     .email__title {
         font-size: 2.5rem;
     }
@@ -380,7 +395,7 @@ header {
         font-size: 1.5rem;
     }
 
-    .email-btn {
+    .email__btn {
         padding: .7em 2.25em;
         font-size: 1.5rem;
     }
