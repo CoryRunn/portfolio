@@ -63,7 +63,6 @@ li {
     text-transform: uppercase;
     color: #2b2d42;
     font-size: 1.5rem;
-    font-style: italic;
 }
 
 span {
@@ -104,6 +103,50 @@ Animated underline *******/
     width: 100%; /* This will be the new width of your border when on hover */
 }
 
+
+
+/* Profile Picture Stylings */
+.profile__pic {
+    order: -1;
+    border-radius: 50%;
+    margin: 1em 0;
+    width: 25%;
+    height: auto;
+    /* -moz-box-shadow: 1px 1px 10px #2b2d42;   Profile pic originally had shadows and hover effects, but based on feedback, this was removed 
+    -webkit-box-shadow: 1px 1px 10px #2b2d42;
+    box-shadow: 1px 1px 10px #2b2d42;
+    transition: all .2s ease-in-out; */
+}
+
+/* .profile__pic:hover,
+.profile__pic:focus {
+    transform: scale(1.1);
+    -moz-box-shadow: 3px 3px 10px #2b2d42;
+    -webkit-box-shadow: 3px 3px 10px #2b2d42;
+    box-shadow: 3px 3px 10px #2b2d42;
+} */
+
+/* Work section images (and footer image) stylings */
+.work__img--photo,
+.contact__img /* footer image */ {
+    border-radius: 5px;
+}
+
+.work__img--photo {
+    -moz-box-shadow: 1px 1px 10px #2b2d42;
+    -webkit-box-shadow: 1px 1px 10px #2b2d42;
+    box-shadow: 1px 1px 10px #2b2d42;
+    transition: all .2s ease-in-out;
+}
+
+.work__img--photo:hover,
+.work__img--photo:focus {
+    transform: scale(1.02);
+    -moz-box-shadow: 3px 3px 10px #2b2d42;
+    -webkit-box-shadow: 3px 3px 10px #2b2d42;
+    box-shadow: 3px 3px 10px #2b2d42;
+}
+
 /* Email Button Stylings */
 .email__btn {
     display: inline-block;
@@ -114,60 +157,18 @@ Animated underline *******/
     text-decoration: none;
     border-radius: 100px;
     text-transform: uppercase;
-    -moz-box-shadow: 1px 1px 10px black;
-    -webkit-box-shadow: 1px 1px 10px black;
-    box-shadow: 1px 1px 10px black;
+    -moz-box-shadow: 1px 1px 5px black;
+    -webkit-box-shadow: 1px 1px 5px black;
+    box-shadow: 1px 1px 5px black;
     transition: all .2s ease-in-out;
 }
 
 .email__btn:hover,
 .email__btn:focus {
     transform: scale(1.1);
-    -moz-box-shadow: 3px 3px 10px black;
-    -webkit-box-shadow: 3px 3px 10px black;
-    box-shadow: 3px 3px 10px black;
-}
-
-/* Profile Picture Stylings */
-.profile__pic {
-    order: -1;
-    border-radius: 50%;
-    margin: 1em 0;
-    width: 25%;
-    height: auto;
-    -moz-box-shadow: 1px 1px 10px #2b2d42;
-    -webkit-box-shadow: 1px 1px 10px #2b2d42;
-    box-shadow: 1px 1px 10px #2b2d42;
-    transition: all .2s ease-in-out;
-}
-
-.profile__pic:hover,
-.profile__pic:focus {
-    transform: scale(1.1);
-    -moz-box-shadow: 3px 3px 10px #2b2d42;
-    -webkit-box-shadow: 3px 3px 10px #2b2d42;
-    box-shadow: 3px 3px 10px #2b2d42;
-}
-
-/* Work section images (and footer image) stylings */
-.work__img--photo,
-.contact__img /* footer image */ {
-    border-radius: 5px;
-}
-
-.work__img--photo {
-    -moz-box-shadow: 5px 5px 10px #2b2d42;
-    -webkit-box-shadow: 5px 5px 10px #2b2d42;
-    box-shadow: 5px 5px 10px #2b2d42;
-    transition: all .2s ease-in-out;
-}
-
-.work__img--photo:hover,
-.work__img--photo:focus {
-    transform: scale(1.02);
-    -moz-box-shadow: 8px 8px 10px #2b2d42;
-    -webkit-box-shadow: 8px 8px 10px #2b2d42;
-    box-shadow: 8px 8px 10px #2b2d42;
+    -moz-box-shadow: 3px 3px 5px black;
+    -webkit-box-shadow: 3px 3px 5px black;
+    box-shadow: 3px 3px 5px black;
 }
 
 /* Background Colors */
@@ -310,14 +311,18 @@ header {
         margin: 0 auto;
     }
 
+    header .flex {
+        flex-direction: column;
+    }
+
     .header {
         width: 70%;
         justify-content: center;
     }
 
-    .header__nav {
+    /* .header__nav {
         padding-left: 4em;
-    }
+    } */
 
     .header__nav--item {
         font-size: 2em;
