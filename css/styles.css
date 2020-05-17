@@ -253,16 +253,31 @@ background: #d80032;
     margin-bottom: 0;
 }
 
-.work__text a {
+.work__text--link {
     color: #d80032;
     text-decoration: none;
 }
 
-.work__text a:hover,
-.work__text a:focus {
+.work__text--link:hover,
+.work__text--link:focus {
     color: #ef233c;
     text-decoration: underline;
 }
+
+.work__github {
+    display: inline-block;
+    margin-top: 1em;
+    text-decoration: none;
+    color: #2b2d42;
+    font-size: 1.25rem;
+}
+
+.work__github:hover,
+.work__github:focus {
+    color: #ef233c;
+    text-decoration: none;
+}
+
 
 .email__title {
     padding-top: 1em;
