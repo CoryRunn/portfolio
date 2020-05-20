@@ -57,7 +57,7 @@ li {
 }
 
 /* Navigation Stylings */
-.header__nav--item {
+.header__nav__item {
     text-decoration: none;
     text-transform: uppercase;
     color: #2b2d42;
@@ -89,7 +89,7 @@ Animated underline *******/
 }
 
 /* Animated underline */
-.header__nav--item:after {
+.header__nav__item:after {
     content: ""; /* This is necessary for the pseudo element to work. */ 
     display: block; /* This will put the pseudo element on its own line. */
     width: 0%; /* Change this to whatever width you want to have before hover. */
@@ -97,8 +97,8 @@ Animated underline *******/
     transition: .5s; /* This establishes the amount of time in seconds the animation should take from start*/
 }
 
-.header__nav--item:hover:after,
-.header__nav--item:focus:after {
+.header__nav__item:hover:after,
+.header__nav__item:focus:after {
     width: 100%; /* This will be the new width of your border when on hover */
 }
 
@@ -126,20 +126,21 @@ Animated underline *******/
 } */
 
 /* Work section images (and footer image) stylings */
-.work__img--photo,
+.work__img__photo,
 .contact__img /* footer image */ {
     border-radius: 5px;
 }
 
-.work__img--photo {
+.work__img__photo {
+    margin-bottom: 1em;
     -moz-box-shadow: 1px 1px 10px #2b2d42;
     -webkit-box-shadow: 1px 1px 10px #2b2d42;
     box-shadow: 1px 1px 10px #2b2d42;
     transition: all .2s ease-in-out;
 }
 
-.work__img--photo:hover,
-.work__img--photo:focus {
+.work__img__photo:hover,
+.work__img__photo:focus {
     transform: scale(1.02);
     -moz-box-shadow: 3px 3px 10px #2b2d42;
     -webkit-box-shadow: 3px 3px 10px #2b2d42;
@@ -249,17 +250,17 @@ background: #d80032;
     justify-content: center;
 }
 
-.work__text--body {
+.work__text__body {
     margin-bottom: 0;
 }
 
-.work__text--link {
+.work__text__link {
     color: #d80032;
     text-decoration: none;
 }
 
-.work__text--link:hover,
-.work__text--link:focus {
+.work__text__link:hover,
+.work__text__link:focus {
     color: #ef233c;
     text-decoration: underline;
 }
@@ -268,7 +269,7 @@ background: #d80032;
     display: inline-block;
     margin-top: 1em;
     text-decoration: none;
-    color: #2b2d42;
+    color: #d80032;
     font-size: 1.25rem;
 }
 
@@ -302,12 +303,12 @@ background: #d80032;
         padding: 0;
     }
 
-    .about__col--body {
+    .about__col__body {
         width: 48%;
         text-align: left;
     }
 
-    .work__text--wrapper {
+    .work__text__wrapper {
         width: 75%;
         margin:0 auto;
     }
@@ -362,7 +363,7 @@ background: #d80032;
         padding-left: 4em;
     } */
 
-    .header__nav--item {
+    .header__nav__item {
         font-size: 2em;
         text-align: left;
     }
@@ -376,7 +377,7 @@ background: #d80032;
         margin: 0 auto;
     }
 
-    .work__col--thirds {
+    .work__col__thirds {
         padding: 3rem 0;
         display: flex;
         justify-content: space-between;
@@ -394,7 +395,7 @@ background: #d80032;
         margin: 0;
     }
 
-    .work__text--title {
+    .work__text__title {
         padding-top: 0;
     }
 
