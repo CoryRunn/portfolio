@@ -39,7 +39,8 @@ h3 {
     font-size: 1.5rem;
 }
 
-p {
+p,
+.tools__list__item {
     letter-spacing: .05em;
 }
 
@@ -54,6 +55,11 @@ ul {
 li {
     list-style-type: none;
     padding: .5em;
+}
+
+.tools__list__item {
+    color: #2b2d42;
+    padding-bottom: 1em;
 }
 
 /* Navigation Stylings */
@@ -76,7 +82,8 @@ strong {
 Animated underline *******/
 
 /* Social Icons stylings */
-.fab {
+.fab,
+.fas {
     font-size: 4rem;
     color: #d80032;
     filter: drop-shadow(.1rem .1rem .1rem #8d99ae);; /* Icons need drop shadow vs box-shadow */
@@ -84,7 +91,9 @@ Animated underline *******/
 }
 
 .fab:hover,
-.fab:focus {
+.fas:hover,
+.fab:focus,
+.fas:focus {
     transform: scale(1.1);
 }
 
@@ -94,6 +103,7 @@ Animated underline *******/
     display: block; /* This will put the pseudo element on its own line. */
     width: 0%; /* Change this to whatever width you want to have before hover. */
     border-bottom: 5px solid #d80032; /* This creates the border. */
+    border-image: linear-gradient(to right, #d80032, #2b2d42) 1; /* allows a gradient to be used for my border-bottom*/
     transition: .5s; /* This establishes the amount of time in seconds the animation should take from start*/
 }
 
@@ -180,6 +190,11 @@ header {
 #about {
     background: #edf2f4;
     padding-top: 2em;
+}
+
+#tools {
+    background: #edf2f4;
+    padding-bottom: 1em;
 }
 
 #work {
@@ -308,6 +323,18 @@ background: #d80032;
         text-align: left;
     }
 
+    .tools__list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .tools__list__item {
+        width: 45%;
+    }
+
     .work__text__wrapper {
         width: 75%;
         margin:0 auto;
@@ -332,12 +359,13 @@ background: #d80032;
         font-size: 1.75rem;
     }
 
-    p {
+    p, 
+    .tools__list__item {
        font-size: 1.2rem;
     }
 
     .fab {
-        font-size: 4em;
+        font-size: 5rem;
     }
 
     /***** Layout *****/
@@ -427,7 +455,8 @@ background: #d80032;
 /**** Footer text and button need to be bigger at this screen size ****/
 @media (min-width: 1045px) {
 
-    p {
+    p,
+    .tools__list__item {
         font-size: 1.3rem;
      }
 
