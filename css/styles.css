@@ -103,7 +103,7 @@ Animated underline *******/
     content: ""; /* This is necessary for the pseudo element to work. */ 
     display: block; /* This will put the pseudo element on its own line. */
     width: 0%; /* Change this to whatever width you want to have before hover. */
-    border-bottom: 5px solid #d80032; /* This creates the border. */
+    border-bottom: 5px solid; /* This creates the border. */
     border-image: linear-gradient(to right, #d80032, #2b2d42) 1; /* allows a gradient to be used for my border-bottom*/
     transition: .5s; /* This establishes the amount of time in seconds the animation should take from start*/
 }
