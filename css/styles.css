@@ -44,31 +44,25 @@ p,
     letter-spacing: .05em;
 }
 
-nav {
-    text-align: center;
-}
-
 ul {
     padding-left: 0;
 }
 
 li {
     list-style-type: none;
-    padding: .5em;
-}
-
-.tools__list__item {
-    color: #2b2d42;
-    font-weight: 600;
-    padding-bottom: 1em;
 }
 
 /* Navigation Stylings */
 .header__nav__item {
-    text-decoration: none;
     text-transform: uppercase;
     color: #2b2d42;
     font-size: 1.5rem;
+    padding: .5em;
+}
+
+.header__nav__item__link {
+    text-decoration: none;
+    color: #2b2d42;
 }
 
 span {
@@ -89,6 +83,7 @@ Animated underline *******/
     color: #d80032;
     filter: drop-shadow(.1rem .1rem .1rem #8d99ae);; /* Icons need drop shadow vs box-shadow */
     transition: all .2s ease-in-out;
+    padding: .5em;
 }
 
 .fab:hover,
@@ -99,7 +94,7 @@ Animated underline *******/
 }
 
 /* Animated underline */
-.header__nav__item:after {
+.header__nav__item__link:after {
     content: ""; /* This is necessary for the pseudo element to work. */ 
     display: block; /* This will put the pseudo element on its own line. */
     width: 0%; /* Change this to whatever width you want to have before hover. */
@@ -108,12 +103,10 @@ Animated underline *******/
     transition: .5s; /* This establishes the amount of time in seconds the animation should take from start*/
 }
 
-.header__nav__item:hover:after,
-.header__nav__item:focus:after {
+.header__nav__item__link:hover:after,
+.header__nav__item__lin k:focus:after {
     width: 100%; /* This will be the new width of your border when on hover */
 }
-
-
 
 /* Profile Picture Stylings */
 .profile__pic {
@@ -128,13 +121,11 @@ Animated underline *******/
     transition: all .2s ease-in-out; */
 }
 
-/* .profile__pic:hover,
-.profile__pic:focus {
-    transform: scale(1.1);
-    -moz-box-shadow: 3px 3px 10px #2b2d42;
-    -webkit-box-shadow: 3px 3px 10px #2b2d42;
-    box-shadow: 3px 3px 10px #2b2d42;
-} */
+.tools__list__item {
+    color: #2b2d42;
+    font-weight: 600;
+    padding-bottom: 1em;
+}
 
 /* Work section images (and footer image) stylings */
 .work__img__photo,
@@ -256,6 +247,14 @@ background: #d80032;
     margin-top: 1em;
 }
 
+.header__nav__list {
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%; */
+    padding: 0 1.5em;
+}
+
 .work__img {
     width: 100%;
     margin: 2em auto 0;
@@ -306,10 +305,20 @@ background: #d80032;
 
 /******* Tablet layout *****/
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
 
     p {
         font-size: 1.2rem;
+    }
+
+    .header__nav {
+        order: -1;
+        width: 100%;
+    }
+
+    .header__nav__list {
+        display: flex;
+        justify-content: space-around;
     }
 
     .about__col {
@@ -387,10 +396,6 @@ background: #d80032;
         width: 70%;
         justify-content: center;
     }
-
-    /* .header__nav {
-        padding-left: 4em;
-    } */
 
     .header__nav__item {
         font-size: 2em;
