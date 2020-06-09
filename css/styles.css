@@ -21,14 +21,9 @@ img {
 h1,
 h2,
 h3 {
-    font-weight: 600;
     margin: 0;
     padding: 0;
-}
-
-h1,
-h2 {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Playfair Display', serif;
 }
 
 h1 {
@@ -108,11 +103,15 @@ Animated underline *******/
     width: 100%; /* This will be the new width of your border when on hover */
 }
 
+.logo {
+    width: 75%;
+    height: auto;
+}
+
 /* Profile Picture Stylings */
 .profile__pic {
-    order: -1;
     border-radius: 50%;
-    margin: 1em 0;
+    margin: 3em 0 1em;
     width: 25%;
     height: auto;
     /* -moz-box-shadow: 1px 1px 10px #2b2d42;   Profile pic originally had shadows and hover effects, but based on feedback, this was removed 
@@ -152,13 +151,13 @@ Animated underline *******/
 /* Email Button Stylings */
 .email__btn {
     display: inline-block;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Playfair Display', serif;
     padding: .5em 2em;
     background: linear-gradient(to right, #d80032, #2b2d42);
     color: #fff;
     text-decoration: none;
     border-radius: 100px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     -moz-box-shadow: 1px 1px 5px black;
     -webkit-box-shadow: 1px 1px 5px black;
     box-shadow: 1px 1px 5px black;
@@ -181,7 +180,7 @@ header {
 
 #about {
     background: #edf2f4;
-    padding-top: 2em;
+    padding: 2em 0;
 }
 
 #tools {
@@ -196,7 +195,7 @@ header {
 
 #contact{
     background: #edf2f4;
-    padding-bottom: 2em;
+    padding: 2em 0;
 }
 
 /******** Scrollbar ********/
@@ -230,7 +229,7 @@ background: #d80032;
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 4em;
+    padding-top: 1em;
     border-radius: 10px;
 }
 
@@ -243,8 +242,8 @@ background: #d80032;
 
 .header__sub-title {
     text-align: center;
-    padding: 0;
-    margin-top: 1em;
+    padding: 1em 0;
+    
 }
 
 .header__nav__list {
@@ -293,7 +292,6 @@ background: #d80032;
     color: #ef233c;
     text-decoration: none;
 }
-
 
 .email__title {
     padding-top: 1em;
