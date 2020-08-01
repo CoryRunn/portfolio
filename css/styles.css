@@ -47,6 +47,10 @@ li {
     list-style-type: none;
 }
 
+button {
+    border: none;
+}
+
 /* Navigation Stylings */
 .header__nav__item {
     text-transform: uppercase;
