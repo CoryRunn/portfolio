@@ -301,6 +301,10 @@ background: #d80032;
     padding-bottom: 1em;
 }
 
+.copyright {
+    padding-top: 2em;
+}
+
 /******* Tablet layout *****/
 
 @media (min-width: 700px) {

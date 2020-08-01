@@ -127,6 +127,16 @@
                         </div>
                         <div class="work__col__thirds">
                             <div class="work__img">
+                                <a href="https://coryrunn.github.io/election-map-js/" target="_blank" rel="noopener" rel="noreferrer"><img class="work__img__photo" src="img/us-election-map.png" alt="picture of a website by Cory Runnells"></a>
+                            </div>
+                            <div class="work__text work__text__wrapper">
+                                <h3 class="work__text__title">US Election Map</h3>
+                                <p class="work__text__body">This is a JavaScript project taken from my <a class="work__text__link" href="https://www.skillcrush.com" target="_blank" rel="noopener">Skillcrush.com</a> course. This project was all about adding some interactivity to the map as you hover over each state. Each state shows the winner's color, the votes for each canidate, the winning canidate, and the election results at the top. This project also included working with a third-party JavaScript file.</p>
+                                <a class="work__github" href="https://github.com/CoryRunn/election-map-js" target="_blank" rel="noopener" rel="noreferrer">See my code on GitHub</a>
+                            </div>
+                        </div>
+                        <div class="work__col__thirds">
+                            <div class="work__img">
                                 <a href="https://coryrunn.github.io/lol-catclock/" target="_blank" rel="noopener" rel="noreferrer"><img class="work__img__photo" src="img/lol-cat.png" alt="picture of a website by Cory Runnells"></a>
                             </div>
                             <div class="work__text work__text__wrapper">
@@ -152,6 +162,9 @@
                     <a href="mailto:cory.runnells@gmail.com" class="email__btn">Email me</a>
                 </div>
             </div>
+            <p class="copyright"> Cory Runnells &copy; <span id="copyright"></span></p>
         </footer>
+
+        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
     </body>
 </html>
