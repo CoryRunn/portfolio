@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -53,19 +57,6 @@ button {
     padding: .5em;
 }
 
-/* Navigation Stylings */
-.header__nav__item {
-    text-transform: uppercase;
-    color: #2b2d42;
-    font-size: 1.5rem;
-    padding: .5em;
-}
-
-.header__nav__item__link {
-    text-decoration: none;
-    color: #2b2d42;
-}
-
 span {
     color: #d80032;
 }
@@ -92,21 +83,6 @@ Animated underline *******/
 .fab:focus,
 .fas:focus {
     transform: scale(1.1);
-}
-
-/* Animated underline */
-.header__nav__item__link:after {
-    content: ""; /* This is necessary for the pseudo element to work. */ 
-    display: block; /* This will put the pseudo element on its own line. */
-    width: 0%; /* Change this to whatever width you want to have before hover. */
-    border-bottom: 5px solid #d80032; /* This creates the border. */
-    /* border-image: linear-gradient(to right, #d80032, #2b2d42) 1; allows a gradient to be used for my border-bottom. Displays wierdly on mobile, start of underline is present without hovering. */
-    transition: .5s; /* This establishes the amount of time in seconds the animation should take from start*/
-}
-
-.header__nav__item__link:hover:after,
-.header__nav__item__link:focus:after {
-    width: 100%; /* This will be the new width of your border when on hover */
 }
 
 .logo {
@@ -179,7 +155,7 @@ Animated underline *******/
 
 /* Background Colors */
 header {
-    color: black;
+    /*color: #8b8b8b;*/
     background: linear-gradient(#8d99ae, #edf2f4);
 }
 
@@ -248,15 +224,58 @@ background: #d80032;
 .header__sub-title {
     text-align: center;
     padding: 1em 0;
-    
 }
 
-.header__nav__list {
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 50%; */
-    padding: 0 1.5em;
+.header__nav {
+    display: none;
+}
+
+.header__nav--mobile {
+    display: block;
+    position: fixed;
+    overflow: hidden;
+    z-index: 25;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #2b2d42;
+    background: #d80032;
+    padding-bottom: 2em;
+}
+
+.header__nav--mobile nav {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header__nav__list--mobile {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    text-align: center;
+}
+
+.header__nav__list--mobile i, a {
+    display: block;
+}
+
+.header__nav__list--mobile a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 0 2em 0;
+}
+
+.header__nav__list--mobile a:visted {
+    color: #edf2f4;
+}
+
+.mobile-nav-icon {
+    color: white;
+    font-size: 1.25rem;
+}
+
+.header__nav__list--mobile li:hover {
+    background: #2b2d42;
 }
 
 .work__img {
@@ -319,13 +338,8 @@ background: #d80032;
     }
 
     .header__nav {
-        order: -1;
-        width: 100%;
-    }
-
-    .header__nav__list {
-        display: flex;
-        justify-content: space-around;
+        display: none;
+        
     }
 
     .about__col {
@@ -389,6 +403,17 @@ background: #d80032;
 
     /* Header */
 
+    .header__nav {
+        display: block;
+        order: -1;
+        width: 100%;
+    }
+
+    .header__nav__list {
+        display: flex;
+        justify-content: center;
+    }
+
     .flex {
         flex-direction: row;
         align-items: center;
@@ -399,14 +424,42 @@ background: #d80032;
         flex-direction: column;
     }
 
+    .header__nav--mobile {
+        display: none;
+    }
+
     .header {
         width: 70%;
         justify-content: center;
     }
 
+       /* Navigation Stylings */
     .header__nav__item {
-        font-size: 2em;
+        text-transform: uppercase;
+        color: #2b2d42;
+        font-size: 2rem;
+        padding: .5em;
         text-align: left;
+    }
+
+    .header__nav__item__link {
+        text-decoration: none;
+        color: #2b2d42;
+    }
+
+        /* Animated underline */
+    .header__nav__item__link:after {
+        content: ""; /* This is necessary for the pseudo element to work. */ 
+        display: block; /* This will put the pseudo element on its own line. */
+        width: 0%; /* Change this to whatever width you want to have before hover. */
+        border-bottom: 5px solid #d80032; /* This creates the border. */
+        /* border-image: linear-gradient(to right, #d80032, #2b2d42) 1; allows a gradient to be used for my border-bottom. Displays wierdly on mobile, start of underline is present without hovering. */
+        transition: .5s; /* This establishes the amount of time in seconds the animation should take from start*/
+    }
+
+    .header__nav__item__link:hover:after,
+    .header__nav__item__link:focus:after {
+        width: 100%; /* This will be the new width of your border when on hover */
     }
 
     /* Work section */
@@ -485,5 +538,11 @@ background: #d80032;
         padding: .7em 2.25em;
         font-size: 1.5rem;
     }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
 }
 
