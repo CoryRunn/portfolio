@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -93,21 +97,6 @@ Animated underline *******/
 .fab:focus,
 .fas:focus {
     transform: scale(1.1);
-}
-
-/* Animated underline */
-.header__nav__item__link:after {
-    content: ""; /* This is necessary for the pseudo element to work. */ 
-    display: block; /* This will put the pseudo element on its own line. */
-    width: 0%; /* Change this to whatever width you want to have before hover. */
-    border-bottom: 5px solid #d80032; /* This creates the border. */
-    /* border-image: linear-gradient(to right, #d80032, #2b2d42) 1; allows a gradient to be used for my border-bottom. Displays wierdly on mobile, start of underline is present without hovering. */
-    transition: .5s; /* This establishes the amount of time in seconds the animation should take from start*/
-}
-
-.header__nav__item__link:hover:after,
-.header__nav__item__link:focus:after {
-    width: 100%; /* This will be the new width of your border when on hover */
 }
 
 .logo {
@@ -275,7 +264,7 @@ background: #d80032;
 
 .header__nav__list--mobile {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0;
     text-align: center;
 }
@@ -301,7 +290,7 @@ background: #d80032;
 
 .header__nav__list--mobile li:hover {
     background: #2b2d42;
-
+}
 
 .work__img {
     width: 100%;
@@ -431,7 +420,18 @@ background: #d80032;
 
     /***** Layout *****/
 
-    /* Header */
+     /* Header */
+
+    .header__nav {
+        display: block;
+        order: -1;
+        width: 100%;
+    }
+
+    .header__nav__list {
+        display: flex;
+        justify-content: center;
+    }
 
     .flex {
         flex-direction: row;
@@ -443,14 +443,42 @@ background: #d80032;
         flex-direction: column;
     }
 
+    .header__nav--mobile {
+        display: none;
+    }
+
     .header {
         width: 70%;
         justify-content: center;
     }
 
+       /* Navigation Stylings */
     .header__nav__item {
-        font-size: 2em;
+        text-transform: uppercase;
+        color: #2b2d42;
+        font-size: 2rem;
+        padding: .5em;
         text-align: left;
+    }
+
+    .header__nav__item__link {
+        text-decoration: none;
+        color: #2b2d42;
+    }
+
+        /* Animated underline */
+    .header__nav__item__link:after {
+        content: ""; /* This is necessary for the pseudo element to work. */ 
+        display: block; /* This will put the pseudo element on its own line. */
+        width: 0%; /* Change this to whatever width you want to have before hover. */
+        border-bottom: 5px solid #d80032; /* This creates the border. */
+        /* border-image: linear-gradient(to right, #d80032, #2b2d42) 1; allows a gradient to be used for my border-bottom. Displays wierdly on mobile, start of underline is present without hovering. */
+        transition: .5s; /* This establishes the amount of time in seconds the animation should take from start*/
+    }
+
+    .header__nav__item__link:hover:after,
+    .header__nav__item__link:focus:after {
+        width: 100%; /* This will be the new width of your border when on hover */
     }
 
     /* Work section */
