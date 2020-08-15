@@ -263,7 +263,7 @@ background: #d80032;
     text-decoration: none;
     text-align: center;
     color: white;
-    padding-bottom: 2em;
+    padding: .25em;
 }
 
 .header__nav__list--mobile a:visted {
@@ -271,7 +271,7 @@ background: #d80032;
 }
 
 .header__nav__list--mobile .header__nav__item__link {
-    font-size: 1rem;
+    font-size: .8rem;
 }
 
 .mobile-nav-icon {
