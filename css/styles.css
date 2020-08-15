@@ -252,10 +252,6 @@ background: #d80032;
 }
 
 .header__nav__list {
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 50%; */
     padding: 0 1.5em;
 }
 
