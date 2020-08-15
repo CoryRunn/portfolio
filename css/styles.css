@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -57,6 +53,19 @@ button {
     padding: .5em;
 }
 
+/* Navigation Stylings */
+.header__nav__item {
+    text-transform: uppercase;
+    color: #2b2d42;
+    font-size: 1.5rem;
+    padding: .5em;
+}
+
+.header__nav__item__link {
+    text-decoration: none;
+    color: #2b2d42;
+}
+
 span {
     color: #d80032;
 }
@@ -83,6 +92,21 @@ Animated underline *******/
 .fab:focus,
 .fas:focus {
     transform: scale(1.1);
+}
+
+/* Animated underline */
+.header__nav__item__link:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    width: 0%; /* Change this to whatever width you want to have before hover. */
+    border-bottom: 5px solid #d80032; /* This creates the border. */
+    /* border-image: linear-gradient(to right, #d80032, #2b2d42) 1; allows a gradient to be used for my border-bottom. Displays wierdly on mobile, start of underline is present without hovering. */
+    transition: .5s; /* This establishes the amount of time in seconds the animation should take from start*/
+}
+
+.header__nav__item__link:hover:after,
+.header__nav__item__link:focus:after {
+    width: 100%; /* This will be the new width of your border when on hover */
 }
 
 .logo {
@@ -155,7 +179,7 @@ Animated underline *******/
 
 /* Background Colors */
 header {
-    /*color: #8b8b8b;*/
+    color: black;
     background: linear-gradient(#8d99ae, #edf2f4);
 }
 
@@ -224,6 +248,7 @@ background: #d80032;
 .header__sub-title {
     text-align: center;
     padding: 1em 0;
+    
 }
 
 .header__nav {
@@ -275,7 +300,7 @@ background: #d80032;
 
 .header__nav__list--mobile li:hover {
     background: #2b2d42;
-}
+
 
 .work__img {
     width: 100%;
@@ -337,8 +362,13 @@ background: #d80032;
     }
 
     .header__nav {
-        display: none;
-        
+        order: -1;
+        width: 100%;
+    }
+
+    .header__nav__list {
+        display: flex;
+        justify-content: space-around;
     }
 
     .about__col {
@@ -402,17 +432,6 @@ background: #d80032;
 
     /* Header */
 
-    .header__nav {
-        display: block;
-        order: -1;
-        width: 100%;
-    }
-
-    .header__nav__list {
-        display: flex;
-        justify-content: center;
-    }
-
     .flex {
         flex-direction: row;
         align-items: center;
@@ -423,42 +442,14 @@ background: #d80032;
         flex-direction: column;
     }
 
-    .header__nav--mobile {
-        display: none;
-    }
-
     .header {
         width: 70%;
         justify-content: center;
     }
 
-       /* Navigation Stylings */
     .header__nav__item {
-        text-transform: uppercase;
-        color: #2b2d42;
-        font-size: 2rem;
-        padding: .5em;
+        font-size: 2em;
         text-align: left;
-    }
-
-    .header__nav__item__link {
-        text-decoration: none;
-        color: #2b2d42;
-    }
-
-        /* Animated underline */
-    .header__nav__item__link:after {
-        content: ""; /* This is necessary for the pseudo element to work. */ 
-        display: block; /* This will put the pseudo element on its own line. */
-        width: 0%; /* Change this to whatever width you want to have before hover. */
-        border-bottom: 5px solid #d80032; /* This creates the border. */
-        /* border-image: linear-gradient(to right, #d80032, #2b2d42) 1; allows a gradient to be used for my border-bottom. Displays wierdly on mobile, start of underline is present without hovering. */
-        transition: .5s; /* This establishes the amount of time in seconds the animation should take from start*/
-    }
-
-    .header__nav__item__link:hover:after,
-    .header__nav__item__link:focus:after {
-        width: 100%; /* This will be the new width of your border when on hover */
     }
 
     /* Work section */
@@ -537,11 +528,5 @@ background: #d80032;
         padding: .7em 2.25em;
         font-size: 1.5rem;
     }
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
 }
 
