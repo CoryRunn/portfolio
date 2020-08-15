@@ -57,19 +57,6 @@ button {
     padding: .5em;
 }
 
-/* Navigation Stylings */
-.header__nav__item {
-    text-transform: uppercase;
-    color: #2b2d42;
-    font-size: 1.5rem;
-    padding: .5em;
-}
-
-.header__nav__item__link {
-    text-decoration: none;
-    color: #2b2d42;
-}
-
 span {
     color: #d80032;
 }
@@ -238,7 +225,6 @@ background: #d80032;
 .header__sub-title {
     text-align: center;
     padding: 1em 0;
-    
 }
 
 .header__nav {
@@ -277,10 +263,15 @@ background: #d80032;
     text-decoration: none;
     text-align: center;
     color: white;
+    padding-bottom: 2em;
 }
 
 .header__nav__list--mobile a:visted {
     color: #edf2f4;
+}
+
+.header__nav__list--mobile .header__nav__item__link {
+    font-size: .25rem;
 }
 
 .mobile-nav-icon {
@@ -420,16 +411,10 @@ background: #d80032;
 
     /***** Layout *****/
 
-     /* Header */
+     /*** Header ***/
 
-    .header__nav {
-        display: block;
-        order: -1;
-        width: 100%;
-    }
-
-    .header__nav__list {
-        display: flex;
+     .header {
+        width: 70%;
         justify-content: center;
     }
 
@@ -443,16 +428,23 @@ background: #d80032;
         flex-direction: column;
     }
 
+     /* Navigation Stylings */
+
     .header__nav--mobile {
         display: none;
     }
 
-    .header {
-        width: 70%;
+    .header__nav {
+        display: block;
+        order: -1;
+        width: 100%;
+    }
+
+    .header__nav__list {
+        display: flex;
         justify-content: center;
     }
 
-       /* Navigation Stylings */
     .header__nav__item {
         text-transform: uppercase;
         color: #2b2d42;
@@ -480,6 +472,12 @@ background: #d80032;
     .header__nav__item__link:focus:after {
         width: 100%; /* This will be the new width of your border when on hover */
     }
+
+    
+
+    
+
+       
 
     /* Work section */
     
