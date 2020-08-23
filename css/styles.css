@@ -448,6 +448,7 @@ background: #d80032;
     .header__nav__list {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .header__nav__item {
@@ -478,9 +479,25 @@ background: #d80032;
         width: 100%; /* This will be the new width of your border when on hover */
     }
 
+    .header__nav__item__link--first:hover:after,
+    .header__nav__item__link--first:focus:after {
+        width: 0; /* This will be the new width of your border when on hover */
+    }
     
     .logo {
         padding-top: 8em;
+    }
+
+    .logoSmall {
+        width: 100px;
+        height: 100px;
+        display: none;
+        transition: transform 0.5s ease;
+        padding-top: .5em;
+    }
+    
+    .show {
+        display: block;
     }
     
 

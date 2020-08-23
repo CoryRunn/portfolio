@@ -24,8 +24,8 @@
                 <div class="flex">
                     <div class="header">
                         <div class="header__wrapper">
-                            <img src="img/color-logo-no-background.svg" alt="Cory Runnells - Web Dev" class="logo">
-                            <img src="img/profile-pic-two.jpg" alt="Picture of Me" class="profile__pic">
+                            <img src="img/color-logo-no-background.svg" alt="Cory Runnells - Web Dev Logo" class="logo">
+                            <img src="img/profile-pic-two.jpg" alt="Picture of Cory Runnells" class="profile__pic">
                             <div class="social">
                                 <ul class="social__icons">
                                     <li><a href="https://www.linkedin.com/in/coryrunnells" aria-label="Linkedin.com link for Cory Runnells" target="_blank" rel="noopener" rel="noreferrer"><i class="fab fa-linkedin"></i></a></li>
@@ -53,6 +53,7 @@
                     <div class="header__nav">
                         <nav>
                             <ul class="header__nav__list">
+                                <li class="header__nav__item"><a href="#" class="header__nav__item__link header__nav__item__link--first"><img src="img/color-logo-no-background.svg" alt="Cory Runnells - Web Dev Logo" class="logoSmall"></a></li>
                                 <li class="header__nav__item"><a href="#about" class="header__nav__item__link">About</a></li>
                                 <li class="header__nav__item"><a href="#tools" class="header__nav__item__link">Tools</a></li>
                                 <li class="header__nav__item"><a href="#work" class="header__nav__item__link">Work</a></li>
@@ -178,6 +179,24 @@
             <p class="copyright"> Cory Runnells &copy; <span id="copyright"></span></p>
         </footer>
 
-        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+        <script>
+            document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+
+            var logo = document.querySelector('.logo');
+            var littleLogo = document.querySelector('.logoSmall');
+            var NUMBER_PIXEL_FROM_TOP = 100;
+
+            function handleScroll () {
+                var logoBottom = logo.getBoundingClientRect().bottom;
+                console.log('bottom', logoBottom);
+                if (logoBottom < NUMBER_PIXEL_FROM_TOP) {
+                    littleLogo.classList.add('show');
+                }   else {
+                    littleLogo.classList.remove('show')
+                }
+            }
+
+            window.addEventListener('scroll', handleScroll)
+        </script>
     </body>
 </html>
