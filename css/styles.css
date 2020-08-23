@@ -438,6 +438,11 @@ background: #d80032;
         display: block;
         order: -1;
         width: 100%;
+        position: fixed;
+        top: 0;
+        border-bottom: 1px solid #d80032;
+        background: #8d99ae;
+        z-index: 1000;
     }
 
     .header__nav__list {
@@ -474,7 +479,9 @@ background: #d80032;
     }
 
     
-
+    .logo {
+        padding-top: 8em;
+    }
     
 
        
