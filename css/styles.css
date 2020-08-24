@@ -239,7 +239,7 @@ background: #d80032;
     bottom: 0;
     width: 100%;
     border-top: 1px solid #2b2d42;
-    background: #d80032;
+    background: #8d99ae;
     padding-bottom: 2em;
 }
 
@@ -257,17 +257,17 @@ background: #d80032;
 
 .header__nav__list--mobile i, a {
     display: block;
+    color: #d80032;
 }
 
 .header__nav__list--mobile a {
     text-decoration: none;
     text-align: center;
-    color: white;
     padding: .25em;
 }
 
 .header__nav__list--mobile a:visted {
-    color: #edf2f4;
+    color: #d80032;
 }
 
 .header__nav__list--mobile .header__nav__item__link {
@@ -280,7 +280,7 @@ background: #d80032;
 }
 
 .header__nav__list--mobile li:hover {
-    background: #2b2d42;
+    background: #fff;
 }
 
 .work__img {
@@ -446,7 +446,6 @@ background: #d80032;
     }
 
     .header__nav__list {
-        display: flex;
         justify-content: center;
         align-items: center;
     }
@@ -489,19 +488,17 @@ background: #d80032;
     }
 
     .logoSmall {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: auto;
         display: none;
         transition: transform 0.5s ease;
-        padding-top: .5em;
+        
     }
     
     .show {
         display: block;
     }
     
-
-       
 
     /* Work section */
     
