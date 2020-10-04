@@ -349,7 +349,7 @@ background: #d80032;
 
     .header__nav__list {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .about__col {
@@ -380,6 +380,8 @@ background: #d80032;
         width: 75%;
         margin:0 auto;
     }
+
+    
 }
 
 
@@ -413,7 +415,7 @@ background: #d80032;
 
      /*** Header ***/
 
-     .header {
+    .header {
         width: 70%;
         justify-content: center;
     }
@@ -452,15 +454,13 @@ background: #d80032;
 
     .header__nav__item {
         text-transform: uppercase;
-        color: #2b2d42;
         font-size: 2rem;
         padding: .5em;
-        text-align: left;
     }
 
     .header__nav__item__link {
         text-decoration: none;
-        color: #2b2d42;
+        color: #fff;
     }
 
         /* Animated underline */
@@ -492,7 +492,6 @@ background: #d80032;
         height: auto;
         display: none;
         transition: transform 0.5s ease;
-        
     }
     
     .show {
@@ -554,6 +553,13 @@ background: #d80032;
     .email__sub-title {
         font-size: 1.125rem;
     }
+
+    @supports (-webkit-text-stroke: 1px black) {
+        .header__nav__item__link {
+          -webkit-text-stroke: .5px black;
+          -webkit-text-fill-color: white;
+        }
+      }
 }
 
 /**** Footer text and button need to be bigger at this screen size ****/
@@ -576,5 +582,8 @@ background: #d80032;
         padding: .7em 2.25em;
         font-size: 1.5rem;
     }
+
+   
 }
+
 
