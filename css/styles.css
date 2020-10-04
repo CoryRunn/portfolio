@@ -57,7 +57,8 @@ button {
     padding: .5em;
 }
 
-span {
+span,
+strong {
     color: #d80032;
 }
 
@@ -553,13 +554,6 @@ background: #d80032;
     .email__sub-title {
         font-size: 1.125rem;
     }
-
-    @supports (-webkit-text-stroke: 1px black) {
-        .header__nav__item__link {
-          -webkit-text-stroke: .5px black;
-          -webkit-text-fill-color: white;
-        }
-      }
 }
 
 /**** Footer text and button need to be bigger at this screen size ****/
